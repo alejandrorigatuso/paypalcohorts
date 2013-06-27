@@ -4,11 +4,10 @@
 /////////////////////////
 // Auxiliary functions///
 /////////////////////////
-
 // Load the payments into $data
 
 function readPaypalData($fileName) {
-    if (($file = fopen("upload/".$fileName, "r")) !== FALSE) {
+    if (($file = fopen("upload/" . $fileName, "r")) !== FALSE) {
         $row = 0;
 
         while (($csvRow = fgetcsv($file, ",")) !== FALSE) {
@@ -21,15 +20,14 @@ function readPaypalData($fileName) {
             }
         }
         fclose($file);
-        unlink("upload/".$fileName);
-        
+        unlink("upload/" . $fileName);
+
 
         return $data;
     } else {
         return false;
     }
 }
-
 
 function sales($users, $cohort, $date) {
     $sum = 0;
@@ -50,7 +48,6 @@ function sales($users, $cohort, $date) {
     return $sum;
 }
 
-
 function search($array, $email) {
     $found = false;
 
@@ -67,7 +64,6 @@ function search($array, $email) {
 
     return $pos;
 }
-
 
 function getInfo($sales) {
 
@@ -154,7 +150,6 @@ function organizePerUser($data) {
     return $users;
 }
 
-
 function getYearMonth($startingYear, $startingMonth, $month) {
 
     $date_Year = $startingYear + floor((($startingMonth - 1) + $month) / 12);
@@ -169,7 +164,6 @@ function getYearMonth($startingYear, $startingMonth, $month) {
 
     return $date;
 }
-
 
 function organizeByCohort($users, $startingYear, $startingMonth, $cohorts) {
 
@@ -315,7 +309,7 @@ function getSalesRelativeToThePreviousMonth($data) {
 
 ////////////////////////
 
-$filename=$_GET["fname"];
+$filename = $_GET["fname"];
 
 
 $outputdata = array();

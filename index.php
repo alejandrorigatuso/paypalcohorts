@@ -154,7 +154,7 @@ $filename = $_GET['fname'];
 
 
                     <div id="results" style="display:none; text-align: center; border: 1px solid black; padding: 5px; margin-left: 40%; margin-right: 40%;margin-top: 1%;
-">
+                         ">
                         <p>Short Term Retention Rate: <span id="shortTermRetention" style="color: blue;font-size: 20px;border: blue;">0.71%</span></p>
                         <p>Long Term Retention Rate: <span id="longTermRetention" style="color: blue;font-size: 20px;border: blue;">0.87%</span></p>    
 
@@ -168,18 +168,18 @@ $filename = $_GET['fname'];
 
 
                 <div  class="footer" style="
-                     background: whitesmoke;
-                     margin-left: 60%;
-                     font-size: 12px;
-                     position: absolute;
-                     top: 85%;
-                     border-radius: 50px;
-                     padding: 15px 10px 0px 10px;
-                     border-width: 1px;
-                     border-color: lightgray;
-                     border-style: solid;
-                     margin-right: 15px;
-                     ">
+                      background: whitesmoke;
+                      margin-left: 60%;
+                      font-size: 12px;
+                      position: absolute;
+                      top: 85%;
+                      border-radius: 50px;
+                      padding: 15px 10px 0px 10px;
+                      border-width: 1px;
+                      border-color: lightgray;
+                      border-style: solid;
+                      margin-right: 15px;
+                      ">
                     <img class="img-circle" src="https://graph.facebook.com/558724844/picture?type=square" title="Alejandro Rigatuso" style="
                          position: relative;
                          border-style: solid;
@@ -216,4 +216,4 @@ $filename = $_GET['fname'];
 
 
 
-              
+

@@ -83,13 +83,13 @@ $filename = $_GET['fname'];
                     <br/>
                     <h3>Use This Tool To Calculate Automatically Your Retention Rates and Visualize a Cohort Analysis From your Paypal Account</h3>
 
-                    <p>This tool was created along with this article that explains how it works. Read the article <a href="http://www.toptal.com/blog">here</a>.  Download the open source code <a href="#">here</a>.</p>
+                    <p>This tool was created for the Toptal Engineering blog along with this article that explains how it works. Read the article <a href="http://www.toptal.com/blog">here</a>.  Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
 
 
                 </div>
 
                 <div class="disclaimer" id="disclaimer">
-                    <p>"Be aware: if you upload your logs, they'll be placed temporarily on my server. Of course, I won't be accessing them, nor storing them permanently, but if you prefer, feel free to use the open-source solution provided.</p>
+                    <p>Be aware: if you upload your logs, they'll be placed temporarily on my server. Of course, I won't be accessing them, nor storing them permanently, but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.</p>
 
                 </div>
 
@@ -110,7 +110,7 @@ $filename = $_GET['fname'];
                         <div class="span2"></div>
                         <div class="span4" >
 
-                            <h4>First, download your paypal log.</h4>
+                            <h4>First, download your Paypal log</h4>
                             <ul>
                                 <li>Login to PayPal.</li>
                                 <li>Click on History -> Download History.</li>
@@ -136,7 +136,7 @@ $filename = $_GET['fname'];
                                 <form action="upload_file.php" method="post"
                                       enctype="multipart/form-data">
                                     <input type="file" name="file" id="file"><br>
-                                    <input type="submit" name="submit" value="Click here to discover your retention rate" class="btn btn-primary btn-large">
+                                    <input type="submit" name="submit" value="Click Here to Discover Your Retention Rates" class="btn btn-primary btn-large">
                                 </form>
                             </div>
                         </div>

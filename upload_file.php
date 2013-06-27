@@ -12,7 +12,7 @@ function generateRandomString($length = 10) {
 $allowedExts = array("csv");
 $extension = end(explode(".", $_FILES["file"]["name"]));
 
-if (($_FILES["file"]["size"] < 2000000)
+if (($_FILES["file"]["size"] < 5000000)
         && in_array($extension, $allowedExts)) {
     if ($_FILES["file"]["error"] > 0) {
         echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
@@ -24,6 +24,7 @@ if (($_FILES["file"]["size"] < 2000000)
 } else {
     echo "Invalid file";
 }
+
 
 
 $filename = $newfilename;

@@ -19,7 +19,7 @@ if (($_FILES["file"]["size"] < 5000000)
     } else {
         $newfilename = generateRandomString(10);
         move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $newfilename);
-        echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+        //echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
     }
 } else {
     echo "Invalid file";

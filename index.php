@@ -11,7 +11,7 @@ $filename = $_GET['fname'];
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-        <script type="text/javascript" src="/js/jquery-2.0.2.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.2.js"></script>
         <script type="text/javascript" src="script.js"></script>
 
         <script>

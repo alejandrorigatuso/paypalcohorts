@@ -180,7 +180,7 @@ $filename = $_GET['fname'];
                          float:left;
                          margin-right: 15px;
                          ">
-                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog</a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at alejandro@postcron.com</p>
+                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog</a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at <a href="mailto:alejandro@postcron.com>">alejandro@postcron.com</a></p>
 
                 </div>
 

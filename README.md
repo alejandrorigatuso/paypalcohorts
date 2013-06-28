@@ -25,6 +25,19 @@ How to use this tool
     c) The Cohort Analysis of the PayPal Sales based on the uploaded PayPal log.
 
 
+Note on how do I calculate Retention
+------------------------------------
+
+Some people calculate Retentions comparing the number of users relative to the first month; I prefer to calculate retention rates based on the previous month.
+
+So, an 80% retention rate means that 80% of the customers that were present on the previous month, are still present
+
+Short term retention rates are related to the retention during the first month.
+
+Long term retention rates ignores the first month retention (usually, long term retention is higher than short term retention).
+
+Again, I recommend you the article at Toptal blog (http://toptal.com/blog).
+
 
 To run this tool from your own server
 -------------------------------------
@@ -46,15 +59,27 @@ How to obtain a PayPal log:
 ---------------------------
 
 1) Login to PayPal.
+
 2) Click on History -> Download History.
+
 3) On the resulting page, select date range of the transactions you want to download.
+
 4) Make sure to select "Comma Delimited, All Activity" as File Type.
+
 5) Make sure to check "Include Shopping Cart details" option.
+
 6) Click on Download History button.
+
 7) PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email.
+
 8) Do the following after the file is generated.
+
 9) Come back to History -> Download History.
+
 10) Come to "Download Recent History Logs" page.
+
 11) Select the log file.
+
 12) Click on "Download Log".
+
 13) A CSV file will be downloaded.

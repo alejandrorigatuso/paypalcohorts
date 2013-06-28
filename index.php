@@ -82,7 +82,7 @@ $filename = $_GET['fname'];
                     <h1>What's Your Retention Rate?</h1>
                     <br/>
                     <h3>Use this tool to perform your own cohort analysis through your PayPal data</h3>
-                    <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/blog">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
+                    <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href=http://www.toptal.com/business/growing-growth-perform-your-own-cohort-analysis>this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
                 </div>
 
                 <div class="disclaimer" id="disclaimer">
@@ -106,14 +106,15 @@ $filename = $_GET['fname'];
                         <div class="span4" >
 
                             <h4>First, download your PayPal log</h4>
+                            
                             <ul>
                                 <li>Login to PayPal.</li>
                                 <li>Click on History -> Download History.</li>
-                                <li>On the resulting page, select date range of the transactions you want to download.</li>
-                                <li>Make sure to select "Comma Delimited, All Activity" as File Type.</li>
-                                <li>Make sure to check "Include Shopping Cart details" option.</li>
-                                <li>Click on Download History button.</li>
-                                <li>PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email.</li>
+                                <li>On the resulting page, select the date range of the transactions you want to download.</li>
+                                <li>Make sure to select "Comma Delimited, All Activity" as 'File Type'</li>
+                                <li>Make sure to check the "Include Shopping Cart Details" option.</li>
+                                <li>Click on 'Download History'.</li>
+                                <li>PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email. Wait for the notification email.</li>
                                 <li>Do the following after the file is generated.</li>
                                 <li>Come back to History -> Download History.</li>
                                 <li>Come to "Download Recent History Logs" page.</li>
@@ -179,7 +180,7 @@ $filename = $_GET['fname'];
                          float:left;
                          margin-right: 15px;
                          ">
-                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog </a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at alejandro@postcron.com</p>
+                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog</a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at alejandro@postcron.com</p>
 
                 </div>
 

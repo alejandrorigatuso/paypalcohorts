@@ -1,6 +1,6 @@
-This tool was created to perform Cohort Analysis and calculate Retention Rates based on PayPal logs. It is made to accompany a post I wrote for the Toptal Engineering Blog--I recommend you check out the article!
+This tool was created to perform Cohort Analysis and calculate Retention Rates based on PayPal logs. It is made to accompany a post I wrote for the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>--I recommend you check out the <a href="http://www.toptal.com/business/growing-growth-perform-your-own-cohort-analysis">article</a>!
 
-If you have any questions, you can contact me at alejandro@postcron.com. I hope you find it useful!
+If you have any questions, you can contact me at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a>. I hope you find it useful!
 
 
 Usage

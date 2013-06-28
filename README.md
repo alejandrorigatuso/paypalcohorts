@@ -48,6 +48,19 @@ upload_max_filesize = 5M
 
 
 
+To View the Output On Your Local Machine
+-------------------------------------
+
+1) Clone the files in a subfolder.
+
+2) Place your .csv PayPal log in the "Upload" directory.
+
+3) Type: 'php parse.php [filename.csv]' (e.g., 'php parse.php mylog.csv').
+
+4) Note that the ordering of results is as follows: {1} - cohort analysis, {2} - short-term retention rate, {3} - long-term retention rate.
+
+
+
 How to Obtain a PayPal log:
 ---------------------------
 

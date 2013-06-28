@@ -29,7 +29,7 @@ Short-term retention rates are related to the retention during the first month.
 
 Long-term retention rates ignore the first month retention (usually, long-term retention is higher than short-term retention).
 
-Again, I recommend that you read the article on the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>.
+Again, I recommend that you read the <a href="http://www.toptal.com/business/growing-growth-perform-your-own-cohort-analysis">article</a> on the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>.
 
 
 To Run This Tool on Your Own Server

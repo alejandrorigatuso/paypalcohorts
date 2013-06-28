@@ -309,8 +309,13 @@ function getSalesRelativeToThePreviousMonth($data) {
 
 ////////////////////////
 
-$filename = $_GET["fname"];
 
+
+if ($_GET["fname"]) {
+    $filename = $_GET["fname"];
+} else {
+    $filename = $argv[1];
+}
 
 $outputdata = array();
 

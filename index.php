@@ -7,7 +7,7 @@ $filename = $_GET['fname'];
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Paypal Cohort Maker</title>
+        <title>PayPal Cohort Analysis</title>
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <script type='text/javascript' src='https://www.google.com/jsapi'></script>
@@ -81,15 +81,12 @@ $filename = $_GET['fname'];
                     <br/>
                     <h1>What's your Retention Rate?</h1>
                     <br/>
-                    <h3>Use This Tool To Calculate Automatically Your Retention Rates and Visualize a Cohort Analysis From your Paypal Account</h3>
-
-                    <p>This tool was created for the Toptal Engineering blog along with this article that explains how it works. Read the article <a href="http://www.toptal.com/blog">here</a>.  Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
-
-
+                    <h3>Use This Tool To Calculate Automatically Your Retention Rates and Visualize a Cohort Analysis From your PayPal Account</h3>
+                    <p>This tool was created for the <a href="toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/blog">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
                 </div>
 
                 <div class="disclaimer" id="disclaimer">
-                    <p>Be aware: if you upload your logs, they'll be placed temporarily on my server. Of course, I won't be accessing them, nor storing them permanently, but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.</p>
+                    <p>Note: if you upload your PayPal logs, they'll be placed temporarily on my server for processing. Of course, I won't be accessing them, nor storing them permanently (they'll be deleted as soon as the data is displayed), but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.</p>
 
                 </div>
 
@@ -98,8 +95,6 @@ $filename = $_GET['fname'];
 
 
                 <div id="uploader" class="row-fluid">
-
-
                     <div class="row">
                         <div class="span2"></div>
                         <h3>How does it works?</h3>
@@ -110,7 +105,7 @@ $filename = $_GET['fname'];
                         <div class="span2"></div>
                         <div class="span4" >
 
-                            <h4>First, download your Paypal log</h4>
+                            <h4>First, download your PayPal log</h4>
                             <ul>
                                 <li>Login to PayPal.</li>
                                 <li>Click on History -> Download History.</li>
@@ -141,11 +136,7 @@ $filename = $_GET['fname'];
                             </div>
                         </div>
                         <div class="span2"></div>
-
-
                     </div>
-
-
                 </div>
 
 

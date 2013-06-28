@@ -6,35 +6,37 @@ http://toptal.com/blog
 
 If you have any doubt, you can contact me at alejandro@postcron.com
 
-I hope you find it useful! 
+I hope you find this tool useful! 
 
 
 How to use this tool
 --------------------
 
-1) Install the code on your server (just unzip or clone the files on a subfolder, see the comments below).
+1) Install the code on your server (just unzip the files on a subfolder).
 
-1) Download the PayPal log (see the instructions/comments below).
+2) Download the PayPal log (see the instructions/comments below).
 
-2) Run the code and upload the PayPal log.
+3) Run the code and upload the PayPal log.
 
-3) The output of this tool is:
+4) The output of this tool is:
 
-    a) Short term retention rate.
-    b) Long term retention rate.
+    a) Short term retention rate (usually, retention rates are lower during first months)
+    b) Long term retention rate (usually, retention is higher after the first months).
     c) A graph with the Cohort Analysis of the PayPal sales.
 
 
 Note on how do I calculate Retention
 ------------------------------------
 
-Some people calculate Retentions comparing the number of users relative to the first month; I prefer to calculate retention rates based on the previous month.
+Some people calculate "Retention Rate" by comparing the number of users relative to the first month. Personally, I prefer to calculate retention rates based on the previous month.
 
-For instance, an 80% retention rate means that 80% of the customers that were present on the previous month, are still present.
+For instance, an 80% retention rate means that 80% of the customers that were present on the previous month, are still present. 80% retention rate on the 10th month means that 80% of the customers present on the 9th month are present on the 10th month. That's very different to say that 80% of the customers that were present on the 1st month are present on the 10th month. 
 
-Short term retention rates are related to the retention during the first month.
+As I said before, I calculate retention always based on the previous month. 
 
-Long term retention rates ignores the first month retention (usually, long term retention is higher than short term retention).
+Short term retention rates are related to the retention during the first month. Churn rates are usually higher on the first month, because customers are not loyal, they are not used to the service/product or they are still trying some features. 
+
+Long term retention rates ignores the first month retention (usually, long term retention is higher than short term retention). 
 
 Again, I recommend you to read the article at Toptal's Engineering Blog (http://toptal.com/blog).
 
@@ -83,3 +85,7 @@ How to obtain a PayPal log:
 12) Click on "Download Log".
 
 13) A CSV file will be downloaded.
+
+
+Note (27/03/2013): I'll make an update with a detailed explanation of the code during the following weeks.
+ 

@@ -97,7 +97,7 @@ $filename = $_GET['fname'];
                 <div id="uploader" class="row-fluid">
                     <div class="row">
                         <div class="span2"></div>
-                        <h3>How does it works?</h3>
+                        <h3>How does it work?</h3>
                     </div>
 
 
@@ -180,7 +180,7 @@ $filename = $_GET['fname'];
                          float:left;
                          margin-right: 15px;
                          ">
-                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog</a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at <a href="mailto:alejandro@postcron.com>">alejandro@postcron.com</a></p>
+                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog</a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a></p>
 
                 </div>
 

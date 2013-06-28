@@ -79,9 +79,9 @@ $filename = $_GET['fname'];
             <div class="">
                 <div class="jumbotron">
                     <br/>
-                    <h1>What's your Retention Rate?</h1>
+                    <h1>What's Your Retention Rate?</h1>
                     <br/>
-                    <h3>Use This Tool To Calculate Automatically Your Retention Rates and Visualize a Cohort Analysis From your PayPal Account</h3>
+                    <h3>Use this tool to perform your own cohort analysis through your PayPal data</h3>
                     <p>This tool was created for the <a href="toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/blog">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
                 </div>
 

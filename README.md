@@ -1,7 +1,33 @@
-This tool was created to make cohort analysis and to calculate retention rates based on PayPal logs.
+This tool was created to perform a Cohort Analysis of your sales and to calculate Retention Rates through your PayPal data.
 
-To run this tool from your own server:
---------------------------------------
+This article was created for the Toptal Engineering Blog. There's a full explanation there, I recommend you to check that article.
+
+http://toptal.com/blog
+
+If you have any doubt, you can contact me at alejandro@postcron.com
+
+I hope you find it useful! 
+
+
+How to use this tool
+--------------------
+
+1) Install the code on your server (just unzip or clone the files on a subfolder, see the comments below).
+
+1) Download the PayPal log (see the instructions below).
+
+2) Run the code and upload the PayPal log.
+
+3) The output of this tool is:
+
+    a) Short term retention rate
+    b) Long term retention rate
+    c) The Cohort Analysis of the PayPal Sales based on the uploaded PayPal log.
+
+
+
+To run this tool from your own server
+-------------------------------------
 
 1) Clone the files in a subfolder.
 
@@ -19,16 +45,16 @@ upload_max_filesize = 5M
 How to obtain a PayPal log:
 ---------------------------
 
-Login to PayPal.
-Click on History -> Download History.
-On the resulting page, select date range of the transactions you want to download.
-Make sure to select "Comma Delimited, All Activity" as File Type.
-Make sure to check "Include Shopping Cart details" option.
-Click on Download History button.
-PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email.
-Do the following after the file is generated.
-Come back to History -> Download History.
-Come to "Download Recent History Logs" page.
-Select the log file.
-Click on "Download Log".
-A CSV file will be downloaded.
+1) Login to PayPal.
+2) Click on History -> Download History.
+3) On the resulting page, select date range of the transactions you want to download.
+4) Make sure to select "Comma Delimited, All Activity" as File Type.
+5) Make sure to check "Include Shopping Cart details" option.
+6) Click on Download History button.
+7) PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email.
+8) Do the following after the file is generated.
+9) Come back to History -> Download History.
+10) Come to "Download Recent History Logs" page.
+11) Select the log file.
+12) Click on "Download Log".
+13) A CSV file will be downloaded.

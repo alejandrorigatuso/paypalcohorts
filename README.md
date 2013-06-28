@@ -14,15 +14,15 @@ How to use this tool
 
 1) Install the code on your server (just unzip or clone the files on a subfolder, see the comments below).
 
-1) Download the PayPal log (see the instructions below).
+1) Download the PayPal log (see the instructions/comments below).
 
 2) Run the code and upload the PayPal log.
 
 3) The output of this tool is:
 
-    a) Short term retention rate
-    b) Long term retention rate
-    c) The Cohort Analysis of the PayPal Sales based on the uploaded PayPal log.
+    a) Short term retention rate.
+    b) Long term retention rate.
+    c) A graph with the Cohort Analysis of the PayPal sales.
 
 
 Note on how do I calculate Retention
@@ -30,13 +30,13 @@ Note on how do I calculate Retention
 
 Some people calculate Retentions comparing the number of users relative to the first month; I prefer to calculate retention rates based on the previous month.
 
-So, an 80% retention rate means that 80% of the customers that were present on the previous month, are still present
+For instance, an 80% retention rate means that 80% of the customers that were present on the previous month, are still present.
 
 Short term retention rates are related to the retention during the first month.
 
 Long term retention rates ignores the first month retention (usually, long term retention is higher than short term retention).
 
-Again, I recommend you the article at Toptal blog (http://toptal.com/blog).
+Again, I recommend you to read the article at Toptal's Engineering Blog (http://toptal.com/blog).
 
 
 To run this tool from your own server

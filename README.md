@@ -1,4 +1,4 @@
-This tool was created to perform Cohort Analysis and calculate Retention Rates based on PayPal logs. It is made to accompany a post I wrote for the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>--I recommend you check out the <a href="http://www.toptal.com/business/growing-growth-perform-your-own-cohort-analysis">article</a>!
+This tool was created to perform Cohort Analysis and calculate Retention Rates based on PayPal logs. It is made to accompany a post I wrote for the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>--I recommend you check out the <a href="http://www.toptal.com/data-science/growing-growth-perform-your-own-cohort-analysis">article</a>!
 
 If you have any questions, you can contact me at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a>. I hope you find it useful!
 
@@ -29,7 +29,7 @@ Short-term retention rates are related to the retention during the first month.
 
 Long-term retention rates ignore the first month retention (usually, long-term retention is higher than short-term retention).
 
-Again, I recommend that you read the <a href="http://www.toptal.com/business/growing-growth-perform-your-own-cohort-analysis">article</a> on the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>.
+Again, I recommend that you read the <a href="http://www.toptal.com/data-science/growing-growth-perform-your-own-cohort-analysis">article</a> on the <a href="http://toptal.com/blog">Toptal Engineering Blog</a>.
 
 
 To Run This Tool on Your Own Server

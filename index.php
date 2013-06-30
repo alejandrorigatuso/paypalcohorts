@@ -3,7 +3,6 @@
 $filename = $_GET['fname'];
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -82,7 +81,7 @@ $filename = $_GET['fname'];
                     <h1>What's Your Retention Rate?</h1>
                     <br/>
                     <h3>Use this tool to perform your own cohort analysis through your PayPal data</h3>
-                    <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href=http://www.toptal.com/business/growing-growth-perform-your-own-cohort-analysis>this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
+                    <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/data-science/growing-growth-perform-your-own-cohort-analysis">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
                 </div>
 
                 <div class="disclaimer" id="disclaimer">
@@ -91,22 +90,72 @@ $filename = $_GET['fname'];
                 </div>
 
 
-                <img id="waitimage" src="39.gif" style="display: block;margin-left: auto;margin-right: auto; display:none"></img>
+                <img id="waitimage" src="img/39.gif" style="display: block;margin-left: auto;margin-right: auto; display:none"></img>
 
 
-                <div id="uploader" class="row-fluid">
+                <div id="simulator">
                     <div class="row">
                         <div class="span2"></div>
-                        <h3>How does it work?</h3>
+                        <div class="span12">
+                            <h3>Simulate the Growth of your Startup Based On Retention and Virality</h3>
+                        </div>
                     </div>
 
 
                     <div class="row">
+
+
                         <div class="span2"></div>
                         <div class="span4" >
 
+
+                            <fieldset>
+                                <label>Number of Cohorts</label>
+                                <input type="text" value="36"  id="cohortsInput"  >
+
+                                <label>Retention</label>
+                                <input type="text" value="0.85" id="retentionInput">
+
+                                <label>Virality (K or Viral Coefficient)</label>
+                                <input type="text" value="0.10" id="viralityInput">
+
+                                <label>New users per month acquired organically or by paid advertisement</label>
+                                <input type="text" value="1000" id="newusersInput">
+
+                                <input type="button"  value="Click here to simulate" class="btn btn-primary btn-large" onclick="simulate(google)">
+                            </fieldset>
+
+
+                        </div>
+
+                        <div  id="chart_simulation" class="span8" style="height:300px"> </div>
+                    </div>
+
+
+                </div>
+
+
+                <div id="uploader" class="row">
+
+                    <br>
+                    <br>
+
+                    <div class="row">
+
+                        <div class="span2"></div>
+                        <div class="span10">
+                            <h3>Visualize a Cohort Analysis based on your PayPal data</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="span2"></div>
+                        <div class="span6" >
+
                             <h4>First, download your PayPal log</h4>
-                            
+
                             <ul>
                                 <li>Login to PayPal.</li>
                                 <li>Click on History -> Download History.</li>
@@ -138,12 +187,14 @@ $filename = $_GET['fname'];
                         </div>
                         <div class="span2"></div>
                     </div>
+
+
+
                 </div>
 
 
 
                 <div id="readyToParse" style="display:none" >
-
 
                     <div id="results" style="display:none; text-align: center; border: 1px solid black; padding: 5px; margin-left: 40%; margin-right: 40%;margin-top: 1%;
                          ">
@@ -193,18 +244,28 @@ $filename = $_GET['fname'];
                 <script>
                     if (filename!="") {
                         $('#readyToParse').show();
+                        $('#simulator').hide();
                         $('#uploader').hide();
                         parse(google);
                         $('#waitimage').css('display','block');
                         
+                    } else {
+                        simulate(google);
                     }
+                    
                     $('#file').css('color','white');
                     
                     $('#file').click(function() {
                         $('#file').css('color','black');
                     })
-    
+                    
+                    
+                    $('fieldset').change(function() {
+                        simulate(google);
+                    });
+                    
                 </script>
+
 
 
 

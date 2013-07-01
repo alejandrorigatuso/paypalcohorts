@@ -168,6 +168,7 @@ $filename = $_GET['fname'];
     <div>
         <div class="">
             <div class="jumbotron">
+                <br/>
                 <h1>Cohort Analysis Visualizer</h1>
                 <br/>
                 <h3>Simulate the growth of your startup and perform your own cohort analysis using PayPal data!</h3>
@@ -395,8 +396,38 @@ $filename = $_GET['fname'];
             
             
     $("#sliders input").css('width',50);
+              
+        
+        
+        
+    ///
+    $( "#sliderVirality" ).on( "slidechange", function( event, ui ) {       
+        viralityInput.value=$('#sliderVirality').slider('value');
+
+     
+    } );      
+      
                 
-                
+    $( "#sliderRetention" ).on( "slidechange", function( event, ui ) {       
+        retentionInput.value=$('#sliderRetention').slider('value');
+
+     
+    } ); 
+           
+    $( "#sliderNewUsers" ).on( "slidechange", function( event, ui ) {       
+        newusersInput.value=$('#sliderNewUsers').slider('value');
+
+     
+    } );           
+    $( "#sliderInitialUsers" ).on( "slidechange", function( event, ui ) {       
+        initialUsersInput.value=$('#sliderInitialUsers').slider('value');
+
+     
+    } );           
+    $( "#sliderCohorts" ).on( "slidechange", function( event, ui ) {       
+        cohortsInput.value=$('#sliderCohorts').slider('value');
+     
+    } ); 
  
 </script>
 

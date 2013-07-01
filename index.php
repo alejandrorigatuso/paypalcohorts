@@ -26,17 +26,21 @@ $filename = $_GET['fname'];
             
             function changeCohorts() {
                 
-                cohortsInput.value=$('#sliderCohorts').slider('value');
-                retentionInput.value=$('#sliderRetention').slider('value');
-                newusersInput.value=$('#sliderNewUsers').slider('value');
-                viralityInput.value=$('#sliderVirality').slider('value');
-                initialUsersInput.value=$('#sliderInitialUsers').slider('value');                 
-                    
+                updateInputs();                                 
                 simulate(google);
                 
                 
                 
             }
+            
+            function updateInputs() {
+                cohortsInput.value=$('#sliderCohorts').slider('value');
+                retentionInput.value=$('#sliderRetention').slider('value');
+                newusersInput.value=$('#sliderNewUsers').slider('value');
+                viralityInput.value=$('#sliderVirality').slider('value');
+                initialUsersInput.value=$('#sliderInitialUsers').slider('value'); 
+            }
+           
             
             $(function() {
                   
@@ -46,7 +50,7 @@ $filename = $_GET['fname'];
                     orientation: "horizontal",
                     range: "min",
                     max: 60,
-                    value: 24,
+                    value: 24,  
                     slide: changeCohorts
                 });
                 $( "#sliderRetention" ).slider({
@@ -164,19 +168,16 @@ $filename = $_GET['fname'];
     <div>
         <div class="">
             <div class="jumbotron">
+                <h1>Cohort Analysis Visualizer</h1>
                 <br/>
-                <h1>Cohort Analysis Visualizator</h1>
-                <br/>
-                <h3>Use this tool to <em>simulate the growth</em> of your startup (and/or) perform your own cohort analysis through <em>your PayPal data</em>!</h3>
+                <h3>Simulate the growth of your startup and perform your own cohort analysis using PayPal data!</h3>
                 <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/data-science/growing-growth-perform-your-own-cohort-analysis">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
             </div>
 
             <div class="disclaimer" id="disclaimer" class="row-fluid">
-                <div class="span-6">
-                    <p>Note: if you upload your PayPal logs, they'll be placed temporarily on my server for processing. Of course, I won't be accessing them, nor storing them permanently (they'll be deleted as soon as the data is displayed), but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.
-                        BTW, I'm Alejandro Rigatuso, founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter.  Feel free to contact me at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a>.</p>
+                <p>Note: if you upload your PayPal logs, they'll be placed temporarily on my server for processing. Of course, I won't be accessing them, nor storing them permanently (they'll be deleted as soon as the data is displayed), but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.
+                    BTW, I'm Alejandro Rigatuso, founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter.  Feel free to contact me at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a>.</p>
 
-                </div>
 
             </div>
 
@@ -188,7 +189,7 @@ $filename = $_GET['fname'];
                 <div class="row-fluid">
                     <div class="span2"></div>
                     <div class="span10">
-                        <h3>Simulate the Growth of your Startup Based On Retention and Virality</h3>
+                        <h3>Simulate Startup Growth Based on Retention and Virality</h3>
                     </div>
                 </div>
 
@@ -207,12 +208,12 @@ $filename = $_GET['fname'];
                                 <div id="sliderCohorts"></div>
                                 <br>
 
-                                <span>Initial users (AKA <em>Big Launch</em>!)</span>
+                                <span>Initial users (A.K.A. big launch!</span>
                                 <input type="text" value="1000" id="initialUsersInput">
                                 <div id="sliderInitialUsers"></div>
                                 <br>
 
-                                <span>New users per month acquired organically or by paid advertisement</span>
+                                <span>New users per month (acquired organically or through paid advertisement)</span>
                                 <input type="text" value="1000" id="newusersInput">
                                 <div id="sliderNewUsers"></div>
                                 <br>
@@ -222,7 +223,7 @@ $filename = $_GET['fname'];
                                 <br>
 
 
-                                <span>Virality (K or Viral Coefficient)</span>
+                                <span>Virality ('K', or 'viral coefficient')</span>
                                 <input type="text" value="0.10" id="viralityInput">
                                 <div id="sliderVirality"></div>
                                 <br>
@@ -254,7 +255,7 @@ $filename = $_GET['fname'];
 
                     <div class="span2"></div>
                     <div class="span10">
-                        <h3>Visualize a Cohort Analysis based on your PayPal data</h3>
+                        <h3>Perform (and Visualize) Your Own Cohort Analysis</h3>
                     </div>
                 </div>
 
@@ -370,7 +371,8 @@ $filename = $_GET['fname'];
         $('#file').css('color','black');
         $('#submitButton').show();
     });
-                    
+                 
+
                     
     $("#sliders input").change(function() {
         $('#sliderCohorts').slider('value', cohortsInput.value);

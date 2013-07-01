@@ -77,6 +77,10 @@ function parse(google){
 
 
 function simulate(google){
+    
+    $(document).ready(function() {
+        
+    
     if (window.XMLHttpRequest)
     {// code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp=new XMLHttpRequest();
@@ -96,24 +100,24 @@ function simulate(google){
         }
     };
     
-    //Cohorts=cohortsInput.value;
-    Cohorts=$('#sliderCohorts').slider('value');
     
-    //Retention=retentionInput.value;
+    $('#sliderCohorts').slider('value', cohortsInput.value);
+    $('#sliderRetention').slider('value', retentionInput.value);
+    $('#sliderNewUsers').slider('value', newusersInput.value);
+    $('#sliderVirality').slider('value', viralityInput.value);
+    $('#sliderInitialUsers').slider('value', initialUsersInput.value);
+    
+    Cohorts=$('#sliderCohorts').slider('value');  
     Retention=$('#sliderRetention').slider('value');
-
-    //Newusers=newusersInput.value;
     Newusers=$('#sliderNewUsers').slider('value');
-
-    //Virality=viralityInput.value;
     Virality=$('#sliderVirality').slider('value');
-    
-    //InitialUsers=initialInput.value;
     InitialUsers=$('#sliderInitialUsers').slider('value');
 
     
     xmlhttp.open("GET","simulate.php?cohorts="+Cohorts+"&retention="+Retention+"&newusers="+Newusers+"&virality="+Virality+"&initialusers="+InitialUsers,true);
     xmlhttp.send();
+    
+    });
     
     
 }

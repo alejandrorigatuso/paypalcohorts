@@ -105,72 +105,68 @@ $filename = $_GET['fname'];
 
     </head>
 
-    
+
 
 
 <body>
 
 
 
-    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
     <script src="js/bootstrap.min.js"></script>
 
-   
-
-            <div id="simulator">
-                
-
-                <div class="row-fluid" style="text-align:center">
 
 
-                   
+    <div id="simulator">
 
 
-                        <fieldset>
-                            <div id="sliders">
-                                <span>Number of Cohorts</span>
-                                <input type="text" value="26"  id="cohortsInput"  >
-                                <div id="sliderCohorts"></div>
-                                <br>
-
-                                <span>Initial users (AKA <em>Big Launch</em>!)</span>
-                                <input type="text" value="1000" id="initialUsersInput">
-                                <div id="sliderInitialUsers"></div>
-                                <br>
-
-                                <span>New users per month acquired organically or by paid advertisement</span>
-                                <input type="text" value="1000" id="newusersInput">
-                                <div id="sliderNewUsers"></div>
-                                <br>
-                                <span>Monthly Retention</span>
-                                <input type="text" value="0.85" id="retentionInput">
-                                <div id="sliderRetention"></div>
-                                <br>
+        <div class="row-fluid" style="text-align:center">
 
 
-                                <span>Virality (K or Viral Coefficient)</span>
-                                <input type="text" value="0.10" id="viralityInput">
-                                <div id="sliderVirality"></div>
-                                <br>
-                            </div>
+            <fieldset>
+                <div id="sliders">
+                    <span>Number of Cohorts</span>
+                    <input type="text" value="26"  id="cohortsInput"  >
+                    <div id="sliderCohorts"></div>
+                    <br>
+
+                    <span>Initial users (A.K.A. big launch!)</span>
+                    <input type="text" value="1000" id="initialUsersInput">
+                    <div id="sliderInitialUsers"></div>
+                    <br>
+
+                    <span>New users per month (acquired organically or through paid advertisement)</span>
+                    <input type="text" value="1000" id="newusersInput">
+                    <div id="sliderNewUsers"></div>
+                    <br>
+                    <span>Monthly Retention</span>
+                    <input type="text" value="0.85" id="retentionInput">
+                    <div id="sliderRetention"></div>
+                    <br>
 
 
-
-                            <input type="button"  value="Click here to simulate" class="btn btn-primary btn-large" onclick="simulate(google)">
-                        </fieldset>
-
-
-
-
-
-                    <div  id="chart_simulation" style="height:400px"> </div>
+                    <span>Virality ('K', or 'viral coefficient')</span>
+                    <input type="text" value="0.10" id="viralityInput">
+                    <div id="sliderVirality"></div>
+                    <br>
                 </div>
 
 
-            </div>
+
+                <input type="button"  value="Click here to simulate" class="btn btn-primary btn-large" onclick="simulate(google)">
+            </fieldset>
 
 
-          
+
+
+
+            <div  id="chart_simulation" style="height:400px"> </div>
+        </div>
+
+
+    </div>
+
+
+
 
 </body>
 </html>

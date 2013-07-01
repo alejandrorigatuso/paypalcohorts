@@ -1,1 +1,1 @@
-<iframe height="100%" width=678 src="http://local.host/paypalParser/embed.php" frameBorder="0"></iframe>
+<iframe height="100%" width=678 src="http://blog.postcron.com//paypalParser/embed.php" frameBorder="0"></iframe>

@@ -1,1 +1,1 @@
-<iframe height="100%" width=679 src="http://local.host/paypalParser/embed.php"></iframe>
+<iframe height="100%" width=678 src="http://local.host/paypalParser/embed.php" frameBorder="0"></iframe>

@@ -21,7 +21,6 @@ function drawCohortOfSimulation(google,analisis) {
     var data = google.visualization.arrayToDataTable(analisis);
     var options = {
        
-       
 
         vAxis: {
             title: 'Users'

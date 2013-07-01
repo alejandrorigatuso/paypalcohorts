@@ -23,20 +23,7 @@ $filename = $_GET['fname'];
 
         <script>
             
-            
-            function changeCohorts() {
-                
-                cohortsInput.value=$('#sliderCohorts').slider('value');
-                retentionInput.value=$('#sliderRetention').slider('value');
-                newusersInput.value=$('#sliderNewUsers').slider('value');
-                viralityInput.value=$('#sliderVirality').slider('value');
-                initialUsersInput.value=$('#sliderInitialUsers').slider('value');                 
-                    
-                simulate(google);
-               
-                
-                
-            }
+          
             
             $(function() {
                   
@@ -46,8 +33,16 @@ $filename = $_GET['fname'];
                     orientation: "horizontal",
                     range: "min",
                     max: 60,
-                    value: 24,
-                    slide: changeCohorts
+                    value: 24,  
+                    slide: function() {
+                        cohortsInput.value=$('#sliderCohorts').slider('value');
+                        simulate(google);
+                       
+                    },
+                    change: function() {
+                        cohortsInput.value=$('#sliderCohorts').slider('value');
+                        simulate(google);
+                    }
                 });
                 $( "#sliderRetention" ).slider({
                     orientation: "horizontal",
@@ -56,7 +51,16 @@ $filename = $_GET['fname'];
                     min:0,
                     value: 0.8,
                     step: 0.01,
-                    slide: changeCohorts
+                    slide: function() {
+                        retentionInput.value=$('#sliderRetention').slider('value');
+                        simulate(google);
+
+                       
+                    },
+                    change: function() {
+                        retentionInput.value=$('#sliderRetention').slider('value');
+                        simulate(google);
+                    }
                    
                 });
                 $( "#sliderNewUsers" ).slider({
@@ -65,7 +69,16 @@ $filename = $_GET['fname'];
                     max: 100000,
                     min:0,
                     value: 1000,
-                    slide: changeCohorts
+                    slide: function() {
+                        newusersInput.value=$('#sliderNewUsers').slider('value');
+                        simulate(google);
+
+                       
+                    },
+                    change: function() {
+                        newusersInput.value=$('#sliderNewUsers').slider('value');
+                        simulate(google);
+                    }
                     
                 });
                 $( "#sliderVirality" ).slider({
@@ -75,7 +88,16 @@ $filename = $_GET['fname'];
                     min:0,
                     value: 0.2,
                     step:0.01,
-                    slide: changeCohorts
+                    slide: function() {
+                        viralityInput.value=$('#sliderVirality').slider('value');
+                        simulate(google);
+
+                       
+                    },
+                    change: function() {
+                        viralityInput.value=$('#sliderVirality').slider('value');
+                        simulate(google);
+                    }
                     
                 });
                 
@@ -86,7 +108,16 @@ $filename = $_GET['fname'];
                     min:0,
                     value: 1000,
                     step:10,
-                    slide: changeCohorts
+                    slide: function() {
+                        initialUsersInput.value=$('#sliderInitialUsers').slider('value');
+                        simulate(google);
+
+                       
+                    },
+                    change: function() {
+                        initialUsersInput.value=$('#sliderInitialUsers').slider('value');
+                        simulate(google);
+                    }
                    
                 });
             
@@ -214,7 +245,9 @@ $filename = $_GET['fname'];
             
     $("#sliders input").css('width',50);
                 
-                
+             
+
+ 
  
 </script>
 

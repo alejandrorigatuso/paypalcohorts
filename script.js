@@ -3,7 +3,7 @@ google.load("visualization", "1", {
     packages:["corechart"]
 });
 
-
+   
 
 function drawCohort(google,analisis) {
     var data = google.visualization.arrayToDataTable(analisis);
@@ -101,11 +101,11 @@ function simulate(google){
     };
     
     
-    $('#sliderCohorts').slider('value', cohortsInput.value);
-    $('#sliderRetention').slider('value', retentionInput.value);
-    $('#sliderNewUsers').slider('value', newusersInput.value);
-    $('#sliderVirality').slider('value', viralityInput.value);
-    $('#sliderInitialUsers').slider('value', initialUsersInput.value);
+//    $('#sliderCohorts').slider('value', cohortsInput.value);
+//    $('#sliderRetention').slider('value', retentionInput.value);
+//    $('#sliderNewUsers').slider('value', newusersInput.value);
+//    $('#sliderVirality').slider('value', viralityInput.value);
+//    $('#sliderInitialUsers').slider('value', initialUsersInput.value);
     
     Cohorts=$('#sliderCohorts').slider('value');  
     Retention=$('#sliderRetention').slider('value');

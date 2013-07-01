@@ -196,7 +196,7 @@ function decorateCohorts($data, $startingYear, $startingMonth) {
 
 
         $month_text = getYearMonth($startingYear, $startingMonth, $k);
-        array_push($rev, "Month $month_text");
+        array_push($rev, "$month_text");
 
 
         $rev = array_reverse($rev);
@@ -211,7 +211,7 @@ function decorateCohorts($data, $startingYear, $startingMonth) {
     $header = array();
     $header[0] = "Month";
     for ($cohort = 1; $cohort <= $cohorts; $cohort++) {
-        $month_text = getYearMonth($startingYear, $startingMonth, $cohort);
+        $month_text = getYearMonth($startingYear, $startingMonth, $cohort-1);
 
         array_push($header, "Cohort $month_text");
     }
@@ -305,11 +305,12 @@ function getSalesRelativeToThePreviousMonth($data) {
 //// Simulator /////
 ////////////////////
 
-function createCohorts($cohorts, $retention, $newusers, $virality) {
+function createCohorts($cohorts, $retention, $newusers, $virality, $initialusers) {
 
 
     $data = array();
 
+    $data[0][0]=$initialusers;
 
     for ($cohort = 0; $cohort < $cohorts; $cohort++) {
         for ($month = 0; $month < $cohorts; $month++) {
@@ -317,12 +318,11 @@ function createCohorts($cohorts, $retention, $newusers, $virality) {
             if ($month == $cohort) {
 
                 $total_users = getTotalUsers($data, $month - 1);
-//$data[$month][$cohort]=$newusers*pow(1+$grow,$month);
 
                 $viralGrow[$month] = $total_users * $virality; //dependiente de la cantidad de usuarios
                 $otherGrow[$month] = $newusers;
 
-                $data[$month][$cohort] = $otherGrow[$month] + $viralGrow[$month];
+                $data[$month][$cohort] += $otherGrow[$month] + $viralGrow[$month];
             } elseif ($month > $cohort) {
                 $data[$month][$cohort] = $data[$month - 1][$cohort] * $retention;
             } else {
@@ -340,7 +340,7 @@ function getTotalUsers($data, $month) {
 
     $sum = 0;
 
-    if ($month >= 1) {
+    if ($month >=0) {
         for ($cohort = 0; $cohort < $cohorts; $cohort++) {
             $sum = $sum + $data[$month][$cohort];
         }

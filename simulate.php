@@ -10,17 +10,19 @@ if ($_GET["cohorts"]) {
     $retention = $_GET["retention"];
     $newusers = $_GET["newusers"];
     $virality = $_GET["virality"];
+    $initialusers = $_GET["initialusers"];
 } else {
     $cohorts = $argv[1];
     $retention = $argv[2];
     $newusers = $argv[3];
     $virality = $argv[4];
+    $initialusers = $_GET["virality"];
 }
 
 
-$data = createCohorts($cohorts, $retention, $newusers, $virality);
-$startingYear = 2013;
-$startingMonth = 5;
+$data = createCohorts($cohorts, $retention, $newusers, $virality,$initialusers);
+$startingYear = date('Y');
+$startingMonth = date('n');
 
 //This function normalizes the data. Each month sales is expressed as a function of the previous month.
 $cohort_data = getSalesRelativeToThePreviousMonth($data);

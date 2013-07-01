@@ -4,14 +4,100 @@ $filename = $_GET['fname'];
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>PayPal Cohort Analysis</title>
         <!-- Bootstrap -->
+        <meta charset="utf-8" />
+
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-        <script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+        <!--<script type="text/javascript" src="js/jquery-2.0.2.js"></script>-->
         <script type="text/javascript" src="script.js"></script>
+
+
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+        <script>
+            
+            
+            function changeCohorts() {
+                
+                cohortsInput.value=$('#sliderCohorts').slider('value');
+                retentionInput.value=$('#sliderRetention').slider('value');
+                newusersInput.value=$('#sliderNewUsers').slider('value');
+                viralityInput.value=$('#sliderVirality').slider('value');
+                initialUsersInput.value=$('#sliderInitialUsers').slider('value');                 
+                    
+                simulate(google);
+                
+                
+                
+            }
+            
+            $(function() {
+                  
+               
+    
+                $( "#sliderCohorts" ).slider({
+                    orientation: "horizontal",
+                    range: "min",
+                    max: 60,
+                    value: 24,
+                    slide: changeCohorts
+                });
+                $( "#sliderRetention" ).slider({
+                    orientation: "horizontal",
+                    range: "max",
+                    max: 1,
+                    min:0,
+                    value: 0.8,
+                    step: 0.01,
+                    slide: changeCohorts
+                   
+                });
+                $( "#sliderNewUsers" ).slider({
+                    orientation: "horizontal",
+                    range: "min",
+                    max: 100000,
+                    min:0,
+                    value: 1000,
+                    slide: changeCohorts
+                    
+                });
+                $( "#sliderVirality" ).slider({
+                    orientation: "horizontal",
+                    range: "min",
+                    max: 2,
+                    min:0,
+                    value: 0.2,
+                    step:0.01,
+                    slide: changeCohorts
+                    
+                });
+                
+                $( "#sliderInitialUsers" ).slider({
+                    orientation: "horizontal",
+                    range: "min",
+                    max: 100000,
+                    min:0,
+                    value: 1000,
+                    step:10,
+                    slide: changeCohorts
+                   
+                });
+            
+            });
+           
+           
+        </script>
+
+
+    <body>
+
 
         <script>
             filename="<?php echo $filename ?>";
@@ -24,8 +110,7 @@ $filename = $_GET['fname'];
             padding: 5px 0;
             text-align: center;
             background-color: #ffffff;
-            /*            border-top: 1px solid #fff;
-                        border-bottom: 1px solid #ddd;*/
+
             font-size:10px;
             color:black;
         }
@@ -69,203 +154,249 @@ $filename = $_GET['fname'];
 
 
 
-    <body>
+<body>
 
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/bootstrap.min.js"></script>
 
-        <div>
-            <div class="">
-                <div class="jumbotron">
-                    <br/>
-                    <h1>What's Your Retention Rate?</h1>
-                    <br/>
-                    <h3>Use this tool to perform your own cohort analysis through your PayPal data</h3>
-                    <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/data-science/growing-growth-perform-your-own-cohort-analysis">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
+
+    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+
+    <div>
+        <div class="">
+            <div class="jumbotron">
+                <br/>
+                <h1>Cohort Analysis Visualizator</h1>
+                <br/>
+                <h3>Use this tool to <em>simulate the growth</em> of your startup (and/or) perform your own cohort analysis through <em>your PayPal data</em>!</h3>
+                <p>This tool was created for the <a href="http://toptal.com/blog">Toptal Engineering blog</a> along with <a href="http://www.toptal.com/data-science/growing-growth-perform-your-own-cohort-analysis">this</a> article that explains how it works. Download the open source code <a href="https://github.com/alejandrorigatuso/paypalcohorts">here</a>.</p>
+            </div>
+
+            <div class="disclaimer" id="disclaimer" class="row-fluid">
+                <div class="span-6">
+                    <p>Note: if you upload your PayPal logs, they'll be placed temporarily on my server for processing. Of course, I won't be accessing them, nor storing them permanently (they'll be deleted as soon as the data is displayed), but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.
+                        BTW, I'm Alejandro Rigatuso, founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter.  Feel free to contact me at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a>.</p>
+
                 </div>
 
-                <div class="disclaimer" id="disclaimer">
-                    <p>Note: if you upload your PayPal logs, they'll be placed temporarily on my server for processing. Of course, I won't be accessing them, nor storing them permanently (they'll be deleted as soon as the data is displayed), but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.</p>
-
-                </div>
+            </div>
 
 
-                <img id="waitimage" src="img/39.gif" style="display: block;margin-left: auto;margin-right: auto; display:none"></img>
+            <img id="waitimage" src="img/39.gif" style="display: block;margin-left: auto;margin-right: auto; display:none"></img>
 
 
-                <div id="simulator">
-                    <div class="row">
-                        <div class="span2"></div>
-                        <div class="span12">
-                            <h3>Simulate the Growth of your Startup Based On Retention and Virality</h3>
-                        </div>
+            <div id="simulator">
+                <div class="row-fluid">
+                    <div class="span2"></div>
+                    <div class="span10">
+                        <h3>Simulate the Growth of your Startup Based On Retention and Virality</h3>
                     </div>
+                </div>
 
 
-                    <div class="row">
+                <div class="row-fluid">
 
 
-                        <div class="span2"></div>
-                        <div class="span4" >
+                    <div class="span2"></div>
+                    <div class="span3" >
 
 
-                            <fieldset>
-                                <label>Number of Cohorts</label>
+                        <fieldset>
+                            <div id="sliders">
+                                <span>Number of Cohorts</span>
                                 <input type="text" value="36"  id="cohortsInput"  >
+                                <div id="sliderCohorts"></div>
+                                <br>
 
-                                <label>Retention</label>
-                                <input type="text" value="0.85" id="retentionInput">
+                                <span>Initial users (AKA <em>Big Launch</em>!)</span>
+                                <input type="text" value="1000" id="initialUsersInput">
+                                <div id="sliderInitialUsers"></div>
+                                <br>
 
-                                <label>Virality (K or Viral Coefficient)</label>
-                                <input type="text" value="0.10" id="viralityInput">
-
-                                <label>New users per month acquired organically or by paid advertisement</label>
+                                <span>New users per month acquired organically or by paid advertisement</span>
                                 <input type="text" value="1000" id="newusersInput">
-
-                                <input type="button"  value="Click here to simulate" class="btn btn-primary btn-large" onclick="simulate(google)">
-                            </fieldset>
-
-
-                        </div>
-
-                        <div  id="chart_simulation" class="span8" style="height:300px"> </div>
-                    </div>
+                                <div id="sliderNewUsers"></div>
+                                <br>
+                                <span>Monthly Retention</span>
+                                <input type="text" value="0.85" id="retentionInput">
+                                <div id="sliderRetention"></div>
+                                <br>
 
 
-                </div>
-
-
-                <div id="uploader" class="row">
-
-                    <br>
-                    <br>
-
-                    <div class="row">
-
-                        <div class="span2"></div>
-                        <div class="span10">
-                            <h3>Visualize a Cohort Analysis based on your PayPal data</h3>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-
-                        <div class="span2"></div>
-                        <div class="span6" >
-
-                            <h4>First, download your PayPal log</h4>
-
-                            <ul>
-                                <li>Login to PayPal.</li>
-                                <li>Click on History -> Download History.</li>
-                                <li>On the resulting page, select the date range of the transactions you want to download.</li>
-                                <li>Make sure to select "Comma Delimited, All Activity" as 'File Type'</li>
-                                <li>Make sure to check the "Include Shopping Cart Details" option.</li>
-                                <li>Click on 'Download History'.</li>
-                                <li>PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email. Wait for the notification email.</li>
-                                <li>Do the following after the file is generated.</li>
-                                <li>Come back to History -> Download History.</li>
-                                <li>Come to "Download Recent History Logs" page.</li>
-                                <li>Select the log file.</li>
-                                <li>Click on "Download Log".</li>
-                                <li>A CSV file will be downloaded. </li>
-                            </ul>
-                        </div>
-
-                        <div class="span4">
-                            <h4>Second, upload the log file</h4>
-                            <div class="span1"></div>
-
-                            <div class="span4">
-                                <form action="upload_file.php" method="post"
-                                      enctype="multipart/form-data">
-                                    <input type="file" name="file" id="file"><br>
-                                    <input type="submit" name="submit" value="Click Here to Discover Your Retention Rates" class="btn btn-primary btn-large">
-                                </form>
+                                <span>Virality (K or Viral Coefficient)</span>
+                                <input type="text" value="0.10" id="viralityInput">
+                                <div id="sliderVirality"></div>
+                                <br>
                             </div>
+
+
+
+                            <input type="button"  value="Click here to simulate" class="btn btn-primary btn-large" onclick="simulate(google)">
+                        </fieldset>
+
+
+                    </div>
+
+
+
+                    <div  id="chart_simulation" class="span6" style="height:400px"> </div>
+                </div>
+
+
+            </div>
+
+
+            <div id="uploader" class="row-fluid">
+
+                <br>
+                <br>
+
+                <div class="row-fluid">
+
+                    <div class="span2"></div>
+                    <div class="span10">
+                        <h3>Visualize a Cohort Analysis based on your PayPal data</h3>
+                    </div>
+                </div>
+
+
+                <div class="row-fluid">
+
+                    <div class="span2"></div>
+                    <div class="span10" >
+
+                        <h4>First, download your PayPal log</h4>
+
+                        <ul>
+                            <li>Login to PayPal.</li>
+                            <li>Click on History -> Download History.</li>
+                            <li>On the resulting page, select the date range of the transactions you want to download.</li>
+                            <li>Make sure to select "Comma Delimited, All Activity" as 'File Type'</li>
+                            <li>Make sure to check the "Include Shopping Cart Details" option.</li>
+                            <li>Click on 'Download History'.</li>
+                            <li>PayPal will start generating the CSV file. Once the file is ready, you will receive a notification via email. Wait for the notification email.</li>
+                            <li>Do the following after the file is generated.</li>
+                            <li>Come back to History -> Download History.</li>
+                            <li>Come to "Download Recent History Logs" page.</li>
+                            <li>Select the log file.</li>
+                            <li>Click on "Download Log".</li>
+                            <li>A CSV file will be downloaded. </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span2"></div>
+
+                    <div class="span10">
+                        <h4>Second, upload the log file</h4>
+
+                        <div>
+                            <form action="upload_file.php" method="post"
+                                  enctype="multipart/form-data">
+                                <input type="file" name="file" id="file"><br>
+                                <input id="submitButton" type="submit" name="submit" value="Click Here to Discover Your Retention Rates" class="btn btn-primary btn-large" style="display:none">
+                            </form>
                         </div>
-                        <div class="span2"></div>
                     </div>
-
-
-
+                    <div class="span2"></div>
                 </div>
 
-
-
-                <div id="readyToParse" style="display:none" >
-
-                    <div id="results" style="display:none; text-align: center; border: 1px solid black; padding: 5px; margin-left: 40%; margin-right: 40%;margin-top: 1%;
-                         ">
-                        <p>Short Term Retention Rate: <span id="shortTermRetention" style="color: blue;font-size: 20px;border: blue;">0.71%</span></p>
-                        <p>Long Term Retention Rate: <span id="longTermRetention" style="color: blue;font-size: 20px;border: blue;">0.87%</span></p>    
-
-
-                    </div>
-
-                    <div  id="chart_div" style="height:400px;" ></div>
-
-                </div>
+            </div>
 
 
 
-                <div  class="footer" style="
-                      background: whitesmoke;
-                      margin-left: 60%;
-                      font-size: 12px;
-                      position: absolute;
-                      top: 85%;
-                      border-radius: 50px;
-                      padding: 15px 10px 0px 10px;
-                      border-width: 1px;
-                      border-color: lightgray;
-                      border-style: solid;
-                      margin-right: 15px;
-                      ">
-                    <img class="img-circle" src="https://graph.facebook.com/558724844/picture?type=square" title="Alejandro Rigatuso" style="
-                         position: relative;
-                         border-style: solid;
-                         border-width: 1px;
-                         border-color: gray;
-                         float:left;
-                         margin-right: 15px;
-                         ">
-                    <p>Created by Alejandro Rigatuso for the <a href="http://www.toptal.com/blog">Toptal Engineering blog</a>. Alejandro  is the founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter. You can contact him at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a></p>
-
-                </div>
+        </div>
 
 
 
+        <div id="readyToParse" style="display:none;text-align:center" >
 
-                </body>
-                </html>
+            <div id="results" style="display:none; text-align: center; border: 1px solid black; padding: 5px; margin-left: 40%; margin-right: 40%;margin-top: 1%;
+                 ">
+                <p>Short Term Retention Rate: <span id="shortTermRetention" style="color: blue;font-size: 20px;border: blue;">0.71%</span></p>
+                <p>Long Term Retention Rate: <span id="longTermRetention" style="color: blue;font-size: 20px;border: blue;">0.87%</span></p>    
 
-                <script>
-                    if (filename!="") {
-                        $('#readyToParse').show();
-                        $('#simulator').hide();
-                        $('#uploader').hide();
-                        parse(google);
-                        $('#waitimage').css('display','block');
+
+            </div>
+
+            <div  id="chart_div" style="height:400px;" ></div>
+
+
+
+        </div>
+
+
+        <div  class="footer" style="
+              background: whitesmoke;
+              padding:20px;
+              font-size:10px
+              ">
+
+            <img class="img-circle" src="https://graph.facebook.com/558724844/picture?type=square" title="Alejandro Rigatuso" style="
+                 position: relative;
+                 border-style: solid;
+                 border-width: 1px;
+                 border-color: gray;
+                 float:left;
+                 margin-right: 15px;
+                 ">
+
+            <p>Note: if you upload your PayPal logs, they'll be placed temporarily on my server for processing. Of course, I won't be accessing them, nor storing them permanently (they'll be deleted as soon as the data is displayed), but if you prefer, feel free to use the <a href="https://github.com/alejandrorigatuso/paypalcohorts">open-source solution provided</a>.
+                BTW, I'm Alejandro Rigatuso, founder of <a href="http://postcron.com">Postcron.com</a>, an easy way to schedule posts on Facebook and Twitter.  Feel free to contact me at <a href="mailto:alejandro@postcron.com">alejandro@postcron.com</a>.</p>
+
+        </div>
+
+
+</body>
+</html>
+
+<script>
+    if (filename!="") {
+        $('#readyToParse').show();
+        $('#simulator').hide();
+        $('#uploader').hide();
+        parse(google);
+        $('#waitimage').css('display','block');
                         
-                    } else {
-                        simulate(google);
-                    }
+    } ;
+                
                     
-                    $('#file').css('color','white');
+    $('#file').css('color','white');
                     
-                    $('#file').click(function() {
-                        $('#file').css('color','black');
-                    })
+    
+    $('input[type=file]').change(function() { 
+        // select the form and submit
+        $('#file').css('color','black');
+        $('#submitButton').show();
+    });
                     
                     
-                    $('fieldset').change(function() {
-                        simulate(google);
-                    });
+    $("#sliders input").change(function() {
+        $('#sliderCohorts').slider('value', cohortsInput.value);
+        $('#sliderRetention').slider('value', retentionInput.value);
+        $('#sliderNewUsers').slider('value', newusersInput.value);
+        $('#sliderVirality').slider('value', viralityInput.value);
+        $('#sliderInitialUsers').slider('value', initialUsersInput.value);
                     
-                </script>
-
+        simulate(google);
+                    
+                   
+    });
+                    
+            
+                   
+    $(document).ready(function() {
+        if (filename=="") {
+            simulate(google);
+        }});
+            
+            
+    $("#sliders input").css('width',50);
+                
+                
+ 
+</script>
 
 
 

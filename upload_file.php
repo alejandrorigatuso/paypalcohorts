@@ -1,5 +1,8 @@
 <?php
 
+// Turn off all error reporting
+error_reporting(0);
+
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randomString = '';

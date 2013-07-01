@@ -8,9 +8,8 @@ google.load("visualization", "1", {
 function drawCohort(google,analisis) {
     var data = google.visualization.arrayToDataTable(analisis);
     var options = {
-        title: 'Cohort Analysis of Sales',
         vAxis: {
-            title: 'Sales'
+            title: 'Revenue'
         },
         isStacked: true
     };
@@ -21,10 +20,22 @@ function drawCohort(google,analisis) {
 function drawCohortOfSimulation(google,analisis) {
     var data = google.visualization.arrayToDataTable(analisis);
     var options = {
-        title: 'Cohort Analysis of Users',
+       
+       
+
         vAxis: {
             title: 'Users'
+            
         },
+        
+        hAxis: {
+            title: 'Time'
+        },
+        
+        legend: {
+            position: 'none'
+        },
+        
         isStacked: true
     };
     var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_simulation'));
@@ -86,12 +97,23 @@ function simulate(google){
         }
     };
     
-    Cohorts=cohortsInput.value;
-    Retention=retentionInput.value;
-    Newusers=newusersInput.value;
-    Virality=viralityInput.value;
+    //Cohorts=cohortsInput.value;
+    Cohorts=$('#sliderCohorts').slider('value');
     
-    xmlhttp.open("GET","simulate.php?cohorts="+Cohorts+"&retention="+Retention+"&newusers="+Newusers+"&virality="+Virality,true);
+    //Retention=retentionInput.value;
+    Retention=$('#sliderRetention').slider('value');
+
+    //Newusers=newusersInput.value;
+    Newusers=$('#sliderNewUsers').slider('value');
+
+    //Virality=viralityInput.value;
+    Virality=$('#sliderVirality').slider('value');
+    
+    //InitialUsers=initialInput.value;
+    InitialUsers=$('#sliderInitialUsers').slider('value');
+
+    
+    xmlhttp.open("GET","simulate.php?cohorts="+Cohorts+"&retention="+Retention+"&newusers="+Newusers+"&virality="+Virality+"&initialusers="+InitialUsers,true);
     xmlhttp.send();
     
     
